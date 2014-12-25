@@ -1,0 +1,8 @@
+# Line endings
+* text eol=lf
+
+# Text files
+*.md text
+*.hpp text
+*.inl text
+*.cpp text

@@ -1,0 +1,15 @@
+# Build
+[Dd]ebug/
+[Rr]elease/
+*.exe
+*.ilk
+*.pdb
+
+# Visual Studio
+*.sln
+*.sdf
+*.opensdf
+*.suo
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
