@@ -3,6 +3,7 @@
 #include <iomanip>
 #include <string>
 #include <exception>
+#include <cstdlib>
 #include "io.hpp"
 
 namespace common {
@@ -52,6 +53,16 @@ void Menu::open()
 	}
 }
 
+void Menu::show_back(bool flag)
+{
+	m_has_back = flag;
+}
+
+void Menu::show_quit(bool flag)
+{
+	m_has_quit = flag;
+}
+
 void Menu::draw()
 {
 	common::clear();
@@ -60,8 +71,14 @@ void Menu::draw()
 		std::cout << std::setw(COLUMN_WIDTH) << std::left << command.m_name << " ";
 		std::cout << command.m_description << std::endl;
 	}
-	std::cout << std::setw(COLUMN_WIDTH) << std::left << "exit" << " ";
-	std::cout << "Close this menu" << std::endl;
+	if (m_has_back) {
+		std::cout << std::setw(COLUMN_WIDTH) << std::left << "b" << " ";
+		std::cout << "Go back to last menu" << std::endl;
+	}
+	if (m_has_quit) {
+		std::cout << std::setw(COLUMN_WIDTH) << std::left << "q" << " ";
+		std::cout << "Quit the application" << std::endl;
+	}
 	std::cout << std::endl;
 }
 
@@ -76,8 +93,10 @@ const Command *Menu::input()
 		// Check for valid input
 		if (std::cin.good()) {
 			// Exit by returning a null pointer
-			if (name == "exit")
+			if (m_has_back && name == "b")
 				return nullptr;
+			if (m_has_quit && name == "q")
+				exit(0);
 			// Find and return command
 			for (auto const &command : m_commands)
 				if (command.m_name == name)

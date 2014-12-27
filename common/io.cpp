@@ -1,6 +1,7 @@
 #include "io.hpp"
 #include <iostream>
 #include <iomanip>
+#include <limits>
 
 namespace common {
 
@@ -26,7 +27,7 @@ std::string underline(std::string text, char symbol)
 void pause()
 {
 	// Wait for user to continue
-	std::cin.get();
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	std::cin.get();
 }
 
@@ -55,6 +56,7 @@ int read_dual(std::string label)
 		fail = false;
 		// Read standard input
 		std::cin.clear();
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		std::cout << label << " 0b";
 		std::string input;
 		std::cin >> input;
@@ -84,9 +86,20 @@ int read_decimal(std::string label)
 	int input;
 	do {
 		std::cin.clear();
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		std::cout << label << " ";
 		std::cin >> input;
 	} while(std::cin.fail());
+	return input;
+}
+
+std::string read_string(std::string label)
+{
+	// TODO: Test this for multiple words separated by whitespace
+	std::string input;
+	std::cout << label << " ";
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	std::getline(std::cin, input);
 	return input;
 }
 

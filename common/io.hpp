@@ -12,6 +12,7 @@ std::string underline(std::string text, char symbol = '-');
 std::string dual_string(int number, bool padded = false);
 int read_dual(std::string label);
 int read_decimal(std::string label);
+std::string read_string(std::string label);
 
 namespace detail {
 
