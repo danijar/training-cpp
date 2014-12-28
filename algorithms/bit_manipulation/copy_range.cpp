@@ -1,7 +1,7 @@
 #include "bit_manipulation.hpp"
 #include <exception>
 
-namespace puzzle {
+namespace algorithms {
 namespace bit_manipulation {
 
 // Copies the least significant bits from source to the range between
@@ -23,4 +23,4 @@ void copy_range(int &destination, int source, size_t from, size_t to)
 }
 
 } // namespace bit_manipulation
-} // namespace puzzle
+} // namespace algorithms

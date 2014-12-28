@@ -2,7 +2,7 @@
 #include <iostream>
 #include "../../common/io.hpp"
 
-namespace puzzle {
+namespace algorithms {
 namespace bit_manipulation {
 
 common::Menu menu()
@@ -40,4 +40,4 @@ common::Menu menu()
 }
 
 } // namespace bit_manipulation
-} // namespace puzzle
+} // namespace algorithms

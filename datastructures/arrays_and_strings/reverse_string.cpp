@@ -1,7 +1,7 @@
 #include "arrays_and_strings.hpp"
 #include <cstring>
 
-namespace puzzle {
+namespace datastructures {
 namespace arrays_and_strings {
 
 void reverse_string(std::string &string)
@@ -23,4 +23,4 @@ void reverse_string(std::string &string)
 }
 
 } // namespace arrays_and_strings
-} // namespace puzzle
+} // namespace datastructures

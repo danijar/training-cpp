@@ -4,7 +4,7 @@
 #include <string>
 #include "../../common/menu.hpp"
 
-namespace puzzle {
+namespace datastructures {
 namespace arrays_and_strings {
 
 common::Menu menu();
@@ -14,6 +14,6 @@ void reverse_string(std::string &string);
 void remove_duplicate_chars(std::string &string);
 
 } // namespace arrays_and_strings
-} // namespace puzzle
+} // namespace datastructures
 
 #endif

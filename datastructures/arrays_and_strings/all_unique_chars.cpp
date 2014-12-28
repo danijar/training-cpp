@@ -1,7 +1,7 @@
 #include "arrays_and_strings.hpp"
 #include <unordered_set>
 
-namespace puzzle {
+namespace datastructures {
 namespace arrays_and_strings {
 
 bool all_unique_chars(const std::string &string)
@@ -25,4 +25,4 @@ bool all_unique_chars_inplace(const std::string &string)
 }
 
 } // namespace arrays_and_strings
-} // namespace puzzle
+} // namespace datastructures

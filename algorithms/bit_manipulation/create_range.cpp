@@ -1,7 +1,7 @@
 #include "bit_manipulation.hpp"
 #include <exception>
 
-namespace puzzle {
+namespace algorithms {
 namespace bit_manipulation {
 
 int create_range(size_t position, size_t length)
@@ -16,4 +16,4 @@ int create_range(size_t position, size_t length)
 }
 
 } // namespace bit_manipulation
-} // namespace puzzle
+} // namespace algorithms

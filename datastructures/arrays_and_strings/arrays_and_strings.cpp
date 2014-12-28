@@ -2,7 +2,7 @@
 #include <iostream>
 #include "../../common/io.hpp"
 
-namespace puzzle {
+namespace datastructures {
 namespace arrays_and_strings {
 
 common::Menu menu()
@@ -59,4 +59,4 @@ common::Menu menu()
 }
 
 } // namespace arrays_and_strings
-} // namespace puzzle
+} // namespace datastructures

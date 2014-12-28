@@ -1,6 +1,6 @@
 #include "arrays_and_strings.hpp"
 
-namespace puzzle {
+namespace datastructures {
 namespace arrays_and_strings {
 
 void remove_duplicate_chars(std::string &string)
@@ -23,4 +23,4 @@ void remove_duplicate_chars(std::string &string)
 }
 
 } // namespace arrays_and_strings
-} // namespace puzzle
+} // namespace datastructures
