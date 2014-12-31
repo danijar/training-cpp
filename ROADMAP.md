@@ -20,11 +20,11 @@ Datastructures
 
 ### Linked lists
 
-- [ ] Implement list class
+- [x] Implement list class
 - [ ] Remove duplicates
 - [ ] Remove duplicates in place
-- [ ] Find nth last element
-- [ ] Remove node given only its pointer
+- [x] Find nth last element
+- [x] Remove node given only its pointer
 - [ ] Sum linked lists with one digit per node
 - [ ] Find beginning of circle
 
